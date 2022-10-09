@@ -12,5 +12,8 @@ function add(num1: number, num2: number) {
 }
 
 button.addEventListener("click", function() {
-  console.log(add(input1.value, input2.value));
+  /* Since TS knows that .value function in JS only returns string AND that strings cannot be used as number variables in the function add above, we also need to
+     explicitly convert these two values to numbers
+  */
+  console.log(add(+input1.value, +input2.value));
 });
