@@ -4,7 +4,10 @@ const input1 = document.getElementById("num1")! as HTMLInputElement;
 const input2 = document.getElementById("num2")! as HTMLInputElement;
 // to make sure that input1-2 are not null, we also need to say that they will get input from HTML AND also put an exclamation mark that marks them as non-nullable
 
-function add(num1, num2) {
+function add(num1: number, num2: number) {
+  /* we also need to assign a type to num1-2, as error says: Parameter 'num1' implicitly has an 'any' type, but a better type may be inferred from usage.
+     to show that, we need to assign the values after a colon inside the function arguments
+  */
   return num1 + num2;
 }
 
